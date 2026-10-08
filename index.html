@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Rudra's responsive and accessible frontend web development portfolio.">
+    <meta name="theme-color" content="#172554">
+    <title>Rudra | Accessible Frontend Portfolio</title>
+
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Keyboard users can skip repeated navigation -->
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header" id="header">
+        <div class="container navbar">
+            <a href="#home" class="logo" aria-label="Rudra home">Rudra</a>
+
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="navLinks">
+                <span aria-hidden="true">☰</span>
+            </button>
+
+            <nav aria-label="Main navigation">
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                    <li>
+                        <button
+                            class="theme-toggle"
+                            id="themeToggle"
+                            type="button"
+                            aria-label="Switch to dark mode">
+                            🌙 Dark
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <!-- HERO -->
+        <section id="home" class="hero" aria-labelledby="hero-title">
+            <div class="container hero-content">
+                <div class="hero-text reveal">
+                    <p class="small-title">FRONTEND WEB DEVELOPMENT INTERN</p>
+
+                    <h1 id="hero-title">Hello, I'm <span>Rudra</span></h1>
+
+                    <h2>Learning to Build Responsive Websites</h2>
+
+                    <p id="greeting" class="greeting" aria-live="polite"></p>
+
+                    <p>
+                        I am a BTech Computer Science student interested in
+                        web development and creating simple, responsive and
+                        user-friendly websites.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn">View My Projects</a>
+                        <a href="#contact" class="btn btn-outline">Contact Me</a>
+                    </div>
+                </div>
+
+                <div class="hero-image reveal">
+                    <img
+                        src="profile.png"
+                        alt="Illustration representing Rudra"
+                        width="550"
+                        height="550"
+                        fetchpriority="high"
+                        decoding="async">
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section id="about" class="about section" aria-labelledby="about-title">
+            <div class="container">
+                <h2 class="section-title reveal" id="about-title">About Me</h2>
+
+                <div class="about-content reveal">
+                    <div class="about-image">
+                        <img
+                            src="about.png"
+                            alt="Illustration representing Rudra's web development journey"
+                            width="500"
+                            height="500"
+                            loading="lazy"
+                            decoding="async">
+                    </div>
+
+                    <div class="about-text">
+                        <h3>A Beginner Web Developer</h3>
+
+                        <p>
+                            I am currently learning frontend web development
+                            and improving my knowledge of HTML and CSS.
+                        </p>
+
+                        <p>
+                            This project is created as part of my internship
+                            task to understand how responsive websites work
+                            across desktop, tablet and mobile devices.
+                        </p>
+
+                        <p>
+                            My main goal is to create websites that are easy
+                            to use, visually clean and comfortable to view
+                            on different screen sizes.
+                        </p>
+
+                        <button
+                            class="text-button"
+                            id="aboutMoreButton"
+                            type="button"
+                            aria-expanded="false"
+                            aria-controls="extraAbout">
+                            Read More
+                        </button>
+
+                        <p class="extra-about" id="extraAbout" hidden>
+                            I am also learning JavaScript so that I can add
+                            useful interactions, dynamic content and better
+                            user experiences to my webpages.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS -->
+        <section id="skills" class="skills section" aria-labelledby="skills-title">
+            <div class="container">
+                <h2 class="section-title reveal" id="skills-title">My Skills</h2>
+
+                <p class="section-description reveal">
+                    Technologies and concepts I am currently learning.
+                </p>
+
+                <div class="skills-container">
+                    <article class="skill-card reveal">
+                        <div class="skill-icon" aria-hidden="true">HTML</div>
+                        <h3>HTML5</h3>
+                        <p>Creating structured and semantic webpage layouts.</p>
+                    </article>
+
+                    <article class="skill-card reveal">
+                        <div class="skill-icon" aria-hidden="true">CSS</div>
+                        <h3>CSS3</h3>
+                        <p>Styling webpages and creating responsive layouts.</p>
+                    </article>
+
+                    <article class="skill-card reveal">
+                        <div class="skill-icon" aria-hidden="true">JS</div>
+                        <h3>JavaScript</h3>
+                        <p>Learning basic programming and webpage interaction.</p>
+                    </article>
+
+                    <article class="skill-card reveal">
+                        <div class="skill-icon" aria-hidden="true">GIT</div>
+                        <h3>Git &amp; GitHub</h3>
+                        <p>Learning version control and project management.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section id="projects" class="projects section" aria-labelledby="projects-title">
+            <div class="container">
+                <h2 class="section-title reveal" id="projects-title">My Projects</h2>
+
+                <p class="section-description reveal">
+                    Some simple projects I have worked on while learning web development.
+                </p>
+
+                <div class="filter-buttons reveal" aria-label="Project filters">
+                    <button class="filter-btn active" data-filter="all" type="button" aria-pressed="true">All</button>
+                    <button class="filter-btn" data-filter="web" type="button" aria-pressed="false">Web</button>
+                    <button class="filter-btn" data-filter="javascript" type="button" aria-pressed="false">JavaScript</button>
+                </div>
+
+                <div class="projects-container">
+                    <article class="project-card reveal" data-category="web">
+                        <img
+                            src="image2.png"
+                            alt="Preview of a responsive personal portfolio website"
+                            width="800"
+                            height="500"
+                            loading="lazy"
+                            decoding="async">
+
+                        <div class="project-content">
+                            <h3>Portfolio Website</h3>
+                            <p>A simple personal portfolio created using HTML and CSS.</p>
+                            <span class="project-tech">HTML • CSS</span>
+
+                            <button
+                                class="project-details-btn"
+                                type="button"
+                                data-title="Portfolio Website"
+                                data-description="A responsive personal portfolio website developed using semantic HTML and CSS.">
+                                View Details
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="project-card reveal" data-category="javascript">
+                        <img
+                            src="image1.png"
+                            alt="Preview of a to-do list interface"
+                            width="408"
+                            height="512"
+                            loading="lazy"
+                            decoding="async">
+
+                        <div class="project-content">
+                            <h3>To-Do List</h3>
+                            <p>A basic task management webpage designed for adding and managing daily tasks.</p>
+                            <span class="project-tech">HTML • CSS • JavaScript</span>
+
+                            <button
+                                class="project-details-btn"
+                                type="button"
+                                data-title="To-Do List"
+                                data-description="A task management interface that can be enhanced with JavaScript for adding, removing and completing tasks.">
+                                View Details
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="project-card reveal" data-category="web">
+                        <img
+                            src="image3.jpg"
+                            alt="Responsive website displayed across desktop, tablet and mobile devices"
+                            width="678"
+                            height="381"
+                            loading="lazy"
+                            decoding="async">
+
+                        <div class="project-content">
+                            <h3>Responsive Website</h3>
+                            <p>A responsive webpage designed to work on desktop, tablet and mobile devices.</p>
+                            <span class="project-tech">HTML • CSS • Media Queries</span>
+
+                            <button
+                                class="project-details-btn"
+                                type="button"
+                                data-title="Responsive Website"
+                                data-description="A responsive webpage designed with flexible layouts and CSS media queries for different screen sizes.">
+                                View Details
+                            </button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" class="contact section" aria-labelledby="contact-title">
+            <div class="container">
+                <h2 class="section-title reveal" id="contact-title">Contact Me</h2>
+
+                <p class="section-description reveal">
+                    Feel free to contact me for any questions or opportunities.
+                </p>
+
+                <div class="contact-layout">
+                    <address class="contact-box reveal">
+                        <p>
+                            <strong>Email:</strong>
+                            <a href="mailto:rudra@example.com">rudra@example.com</a>
+                        </p>
+                        <p><strong>Location:</strong> India</p>
+                        <p><strong>Interest:</strong> Frontend Web Development</p>
+                    </address>
+
+                    <form class="contact-form reveal" id="contactForm" novalidate>
+                        <div class="form-group">
+                            <label for="name">Name <span aria-hidden="true">*</span></label>
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                placeholder="Enter your name"
+                                autocomplete="name"
+                                required
+                                minlength="3"
+                                aria-describedby="nameError"
+                                aria-invalid="false">
+                            <small class="error-message" id="nameError" aria-live="polite"></small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email <span aria-hidden="true">*</span></label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="Enter your email"
+                                autocomplete="email"
+                                required
+                                aria-describedby="emailError"
+                                aria-invalid="false">
+                            <small class="error-message" id="emailError" aria-live="polite"></small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message <span aria-hidden="true">*</span></label>
+                            <textarea
+                                id="message"
+                                name="message"
+                                rows="5"
+                                placeholder="Enter your message"
+                                required
+                                minlength="10"
+                                aria-describedby="messageError"
+                                aria-invalid="false"></textarea>
+                            <small class="error-message" id="messageError" aria-live="polite"></small>
+                        </div>
+
+                        <button class="btn submit-btn" type="submit">Send Message</button>
+                        <p id="formSuccess" class="form-success" role="status" aria-live="polite"></p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- PROJECT MODAL -->
+    <div
+        class="modal"
+        id="projectModal"
+        aria-hidden="true"
+        role="presentation">
+        <div
+            class="modal-content"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="modalTitle"
+            aria-describedby="modalDescription">
+
+            <button
+                class="modal-close"
+                id="modalClose"
+                type="button"
+                aria-label="Close project details">
+                <span aria-hidden="true">&times;</span>
+            </button>
+
+            <h2 id="modalTitle">Project</h2>
+            <p id="modalDescription"></p>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>© 2026 Rudra. Responsive Web Design Internship Project.</p>
+        </div>
+    </footer>
+
+    <button
+        id="topButton"
+        class="top-button"
+        type="button"
+        aria-label="Scroll to top"
+        aria-hidden="true">
+        ↑
+    </button>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
